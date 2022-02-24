@@ -27,7 +27,7 @@ export const EmblaContainer = styled.div`
 
     > span {
       display: flex;
-      width: 70%;
+      width: 95%;
     }
 
     span.react-loading-skeleton {
@@ -35,7 +35,7 @@ export const EmblaContainer = styled.div`
     }
 
     img {
-      width: 100%;
+      width: 95%;
       object-fit: contain;
     }
 

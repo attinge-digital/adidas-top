@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 import { Carousel } from "../components/Carousel";
 
 import { Main, ContentContainer } from "../styles/Seios";
@@ -70,21 +71,8 @@ export default function Dados(): JSX.Element {
             setSelectedSlide={setSelectedSlide}
             storedSlide={storedSlide}
           />
-          <button
-            type="button"
-            className="primary"
-            onClick={() => router.push("/medidas")}
-          >
-            CONTINUAR
-            <img
-              src="/static/images/seta-direita-branca.png"
-              alt="Seta Branca"
-            />
-          </button>
-          <button type="button" className="back" onClick={() => router.back()}>
-            VOLTAR
-          </button>
         </ContentContainer>
+        <Footer prev="/dados" next="/medidas" />
       </Main>
     </>
   );

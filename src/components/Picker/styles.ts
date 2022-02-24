@@ -9,7 +9,7 @@ export const Container = styled.div`
   border: 1px solid ${({ theme }) => theme.primaryOpacity};
   background-color: white;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1.125rem;
 
   * {
     font-family: "AdihausDINBold";

@@ -11,13 +11,12 @@ export const Main = styled.main`
 export const ContentContainer = styled.div`
   width: 100%;
   max-width: 28.25rem;
-  flex: 1;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 3.3475rem 0;
+  padding: 3.25rem 0 1.4375rem 0;
   align-self: center;
 
   h1,
@@ -31,7 +30,7 @@ export const ContentContainer = styled.div`
   h1 {
     font-family: "AdihausDINBold", sans-serif;
     font-size: 1.125rem;
-    line-height: 1.25rem;
+    line-height: 1.1875rem;
     letter-spacing: 0.06em;
   }
 
@@ -49,7 +48,7 @@ export const ContentContainer = styled.div`
     font-size: 0.75rem;
     line-height: 0.5rem;
     letter-spacing: 0.06em;
-    margin: 0.875rem 0;
+    margin: 0.75rem 0 0.875rem 0;
   }
 
   .title {
@@ -66,12 +65,12 @@ export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  margin: 1.25rem 0 1rem 0;
+  margin: 1.25rem 0 1.25rem 0;
 
-  * + * {
-    margin-left: 0.4375rem;
+  * {
+    width: 32%;
   }
 `;
 
@@ -90,7 +89,7 @@ export const IconsContainer = styled.div`
     flex-direction: row;
     align-items: center;
     /* justify-content: center; */
-    padding: 0.5rem 0;
+    padding: 0 0 0.75rem 0;
 
     width: 30%;
 
@@ -101,15 +100,17 @@ export const IconsContainer = styled.div`
 
     h1 {
       font-family: "AdihausDINBold", sans-serif;
-      font-size: 0.75rem;
+      font-size: 0.625rem;
       letter-spacing: 0.06em;
+      display: flex;
       color: ${({ theme }) => theme.textSecondary};
     }
 
     img {
-      width: 2.25rem;
+      width: 2rem;
+      height: 2rem;
       object-fit: contain;
-      margin-right: 0.25rem;
+      margin-right: 0.5rem;
     }
   }
 `;

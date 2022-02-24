@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 import { Picker } from "../components/Picker";
 
 import {
@@ -22,7 +22,6 @@ import { activities } from "../utils/activities";
  */
 
 export default function Dados(): JSX.Element {
-  const router = useRouter();
   const [icons, setIcons] = React.useState([]);
   const [birthyear, setBirthyear] = React.useState(null);
   const [impactLevel, setImpactLevel] = React.useState("MÉDIO");
@@ -71,7 +70,11 @@ export default function Dados(): JSX.Element {
       <Main>
         <Header />
         <ContentContainer>
-          <h1>queremos saber um pouco mais sobre você</h1>
+          <h1>
+            queremos saber um
+            <br />
+            pouco mais sobre você
+          </h1>
           <h2>qual é o seu ano de nascimento?</h2>
 
           <Picker
@@ -82,7 +85,11 @@ export default function Dados(): JSX.Element {
             }}
           />
 
-          <h1>Qual é a intensidade e o tipo de esporte que você pratica?</h1>
+          <h1>
+            Qual é a intensidade e o tipo de
+            <br />
+            esporte que você pratica?
+          </h1>
 
           <ButtonsContainer>
             <button
@@ -139,7 +146,7 @@ export default function Dados(): JSX.Element {
                     {!showImgs && (
                       <Skeleton
                         style={{
-                          height: "2.2rem",
+                          height: "2rem",
                           borderRadius: "3px",
                         }}
                         highlightColor="#dbc7b3"
@@ -153,9 +160,9 @@ export default function Dados(): JSX.Element {
                       onLoad={() => {
                         setLoadedImages(loadedImages + 1);
                       }}
-                      style={{ display: showImgs ? "block" : "none" }}
+                      style={{ display: showImgs ? "flex" : "none" }}
                     />
-                    <h1 style={{ display: showImgs ? "block" : "none" }}>
+                    <h1 style={{ display: showImgs ? "flex" : "none" }}>
                       {item.name}
                     </h1>
                   </div>
@@ -163,31 +170,8 @@ export default function Dados(): JSX.Element {
               </IconsContainer>
             </>
           )}
-
-          <button
-            type="button"
-            className="primary"
-            onClick={() =>
-              router.push({
-                pathname: "/seios",
-                query: {
-                  ...router.query,
-                  impactLevel,
-                },
-              })
-            }
-          >
-            CONTINUAR
-            <img
-              src="/static/images/seta-direita-branca.png"
-              alt="Seta Branca"
-            />
-          </button>
-
-          <button type="button" className="back" onClick={() => router.back()}>
-            VOLTAR
-          </button>
         </ContentContainer>
+        <Footer prev="/" next="/seios" />
       </Main>
     </>
   );

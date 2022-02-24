@@ -11,13 +11,12 @@ export const Main = styled.main`
 export const ContentContainer = styled.div`
   width: 100%;
   max-width: 28.25rem;
-  flex: 1;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 3.3475rem 0;
+  padding: 2.375rem 0 0.5rem 0;
   align-self: center;
 
   h1 {
@@ -25,12 +24,12 @@ export const ContentContainer = styled.div`
     color: ${({ theme }) => theme.primary};
     font-family: "AdihausDINBold", sans-serif;
     font-size: 1.125rem;
-    line-height: 1.875rem;
+    line-height: 1.1875rem;
     letter-spacing: 0.06em;
   }
 
   > h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.125rem;
   }
 
   .title {
@@ -55,10 +54,10 @@ export const MedidasContainer = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  margin: 2.5rem 0 1rem 0;
+  margin: 1.125rem 0 1rem 0;
 
   > div {
-    width: calc(100% - 7.5rem);
+    width: calc(100% - 7rem);
   }
 
   .medidas {
@@ -66,33 +65,33 @@ export const MedidasContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 6rem;
+    width: 4.75rem;
     position: relative;
 
-    padding: 0.625rem;
+    padding: 0.625rem 0;
 
     background-color: ${({ theme }) => theme.backgroundSecondaryOpc};
 
     div {
-      width: 100%;
+      width: 85%;
 
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 
-      padding: 0.625rem 0;
+      height: 2.25rem;
       border: 1px solid ${({ theme }) => theme.primaryOpacity};
       background-color: white;
 
       & + div {
-        margin-top: 0.625rem;
+        margin-top: 0.75rem;
       }
 
       p {
         font-family: "AdihausDINBold";
-        font-size: 0.925rem;
-        line-height: 1.375rem;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
         text-align: center;
         letter-spacing: 0.24em;
         color: ${({ theme }) => theme.primary};
@@ -102,26 +101,26 @@ export const MedidasContainer = styled.div`
     &::before {
       content: "";
       position: absolute;
-      top: -0.275rem;
+      top: -0.125rem;
       left: 0;
       width: 0;
       height: 0;
-      border-left: 3rem solid transparent;
-      border-right: 3rem solid transparent;
-      border-bottom: 0.275rem solid
+      border-left: 2.375rem solid transparent;
+      border-right: 2.375rem solid transparent;
+      border-bottom: 0.125rem solid
         ${({ theme }) => theme.backgroundSecondaryOpc};
     }
 
     &::after {
       content: "";
       position: absolute;
-      bottom: -0.275rem;
+      bottom: -0.125rem;
       left: 0;
       width: 0;
       height: 0;
-      border-left: 3rem solid transparent;
-      border-right: 3rem solid transparent;
-      border-top: 0.275rem solid ${({ theme }) => theme.backgroundSecondaryOpc};
+      border-left: 2.375rem solid transparent;
+      border-right: 2.375rem solid transparent;
+      border-top: 0.125rem solid ${({ theme }) => theme.backgroundSecondaryOpc};
     }
   }
 `;

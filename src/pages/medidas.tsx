@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 import { Carousel } from "../components/Carousel";
 import { RangeInput } from "../components/Range";
 
@@ -25,13 +26,11 @@ export default function Medidas(): JSX.Element {
       img: "torax.png",
       value: "Como medir tórax",
       title: "POSIÇÃO DA FITA PARA MEDIR O TÓRAX",
-      customStyle: { width: "85%" },
     },
     {
       img: "busto.png",
       value: "Como medir busto",
       title: "POSIÇÃO DA FITA PARA MEDIR O BUSTO",
-      customStyle: { width: "85%" },
     },
   ];
 
@@ -98,21 +97,8 @@ export default function Medidas(): JSX.Element {
               <span className="bottom" />
             </div>
           </MedidasContainer>
-          <button
-            type="button"
-            className="primary"
-            onClick={() => router.push("/resultados")}
-          >
-            CONTINUAR
-            <img
-              src="/static/images/seta-direita-branca.png"
-              alt="Seta Branca"
-            />
-          </button>
-          <button type="button" className="back" onClick={() => router.back()}>
-            VOLTAR
-          </button>
         </ContentContainer>
+        <Footer prev="/seios" next="/resultados" />
       </Main>
     </>
   );

@@ -13,7 +13,7 @@ export const Container = styled.div`
   align-self: center;
 
   img {
-    width: 15%;
+    width: 1.875rem;
     object-fit: center;
   }
 `;

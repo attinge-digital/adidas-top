@@ -12,13 +12,12 @@ export const ContentContainer = styled.div`
   width: 100%;
   max-width: 30rem;
   align-self: center;
-  flex: 1;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 3.3475rem 0;
+  padding: 3.3475rem 0 4.2625rem 0;
 
   h1 {
     color: ${({ theme }) => theme.primary};

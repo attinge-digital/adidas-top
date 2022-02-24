@@ -78,11 +78,12 @@ export default createGlobalStyle`
     &.primary {
       font-family: "AdihausDINBold", sans-serif;
       font-size: 0.875rem;
-      line-height: 1.125rem;
+      line-height: 100%;
       font-weight: bold;
       letter-spacing: 0.24em;
 
-      padding: 0.8rem 0.9rem;
+      height: 2.75rem;
+      padding: 0 0.8125rem;
 
       background: ${({ theme }) => theme.primary};
       box-shadow: ${({ theme }) => theme.background} 4px 4px 0px -1.75px, ${({ theme }) => theme.primary} 4px 4px;
@@ -96,7 +97,8 @@ export default createGlobalStyle`
       font-weight: bold;
       letter-spacing: 0.24em;
 
-      padding: 0.75rem;
+      height: 2.25rem;
+      padding: 0 !important;
       border-radius: 3px;
 
       background: transparent;
