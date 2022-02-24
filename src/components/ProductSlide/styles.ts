@@ -5,7 +5,8 @@ export const Slide = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1.5rem 0 2.5rem 0;
+  /* margin: 1.5rem 0 2.5rem 0; */
+  max-height: 17.375rem;
 
   h1 {
     font-family: "AdihausDINBold", sans-serif;
@@ -17,9 +18,9 @@ export const Slide = styled.div`
   }
 
   img {
-    width: 80% !important;
+    width: 80%;
     object-fit: contain;
-    max-height: 17.5rem;
+    max-width: 11.875rem;
   }
 `;
 

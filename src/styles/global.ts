@@ -92,8 +92,8 @@ export default createGlobalStyle`
     &.secondary {
       font-family: "AdihausDINBold", sans-serif;
       color: ${({ theme }) => theme.secondaryOpacity};
-      font-size: 0.675rem;
-      line-height: 0.75rem;
+      font-size: 0.625rem;
+      line-height: 0.7rem;
       font-weight: bold;
       letter-spacing: 0.24em;
 

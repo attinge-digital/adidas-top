@@ -56,9 +56,10 @@ export function ProductSlide({
       {isLoading && (
         <Skeleton
           style={{
-            height: "12.5rem",
-            margin: "1.25rem 0",
-            width: "100%",
+            height: "10.25rem",
+            width: "95%",
+            margin: "0.875rem auto",
+            maxWidth: "11.875rem",
             borderRadius: "3px",
           }}
           highlightColor="#dbc7b3"

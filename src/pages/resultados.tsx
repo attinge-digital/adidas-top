@@ -148,7 +148,7 @@ export default function Medidas(): JSX.Element {
                         </div>
                       </div>
                     </div>
-                    <div>
+                    <div style={{ alignItems: "center" }}>
                       <h1>IMPACTO</h1>
                       <div className="impact-container">
                         <h1>{results.intensidade}</h1>
@@ -165,8 +165,9 @@ export default function Medidas(): JSX.Element {
                           ) : (
                             <Skeleton
                               style={{
-                                height: "calc(2rem + 2px)",
+                                height: "1.5rem",
                                 borderRadius: "3px",
+                                maxWidth: "5.1875rem",
                               }}
                               highlightColor="#dbc7b3"
                               baseColor="#c1a891"
@@ -250,9 +251,9 @@ export default function Medidas(): JSX.Element {
           ) : (
             <h1 style={{ marginTop: "0.5rem" }}>{msg}</h1>
           )}
-          <button type="button" className="back" onClick={() => router.back()}>
+          {/* <button type="button" className="back" onClick={() => router.back()}>
             VOLTAR
-          </button>
+          </button> */}
         </ContentContainer>
       </Main>
     </>

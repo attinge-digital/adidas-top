@@ -26,11 +26,13 @@ export default function Medidas(): JSX.Element {
       img: "torax.png",
       value: "Como medir tórax",
       title: "POSIÇÃO DA FITA PARA MEDIR O TÓRAX",
+      customStyles: "15rem",
     },
     {
       img: "busto.png",
       value: "Como medir busto",
       title: "POSIÇÃO DA FITA PARA MEDIR O BUSTO",
+      customStyles: "15rem",
     },
   ];
 
@@ -50,6 +52,7 @@ export default function Medidas(): JSX.Element {
         <ContentContainer>
           <h1>AGORA NOS INFORME SUAS MEDIDAS</h1>
           <Carousel
+            maxHeight="15rem"
             slides={slides}
             selectedSlide={selectedSlide}
             setSelectedSlide={setSelectedSlide}

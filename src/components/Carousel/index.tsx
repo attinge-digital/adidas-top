@@ -23,6 +23,7 @@ type Slide = {
 
 interface CarouselProps {
   slides: Slide[] | Product[];
+  maxHeight?: string;
   isProductSlide?: boolean;
   selectedSlide: number;
   setSelectedSlide: Dispatch<SetStateAction<number | null>>;
@@ -32,6 +33,7 @@ interface CarouselProps {
 
 export const Carousel = ({
   slides,
+  maxHeight,
   isProductSlide,
   selectedSlide,
   setSelectedSlide,
@@ -53,8 +55,16 @@ export const Carousel = ({
     if (storedSlide !== -1) emblaApi?.scrollTo(storedSlide);
   }, [storedSlide, emblaApi]);
 
+  React.useEffect(() => {
+    if (
+      emblaApi &&
+      !emblaApi?.slidesInView()?.some((item) => item === selectedSlide)
+    )
+      emblaApi?.scrollTo(selectedSlide);
+  }, [selectedSlide]);
+
   return (
-    <EmblaContainer>
+    <EmblaContainer style={{ maxHeight }}>
       <button
         type="button"
         className="embla__prev"
@@ -92,6 +102,7 @@ export const Carousel = ({
                         style={{
                           ...item?.customStyle,
                           height: slideLoaded ? "unset" : 0,
+                          maxHeight,
                         }}
                         onLoad={() => setSlideLoaded(true)}
                       />
@@ -100,7 +111,11 @@ export const Carousel = ({
                           highlightColor="#dbc7b3"
                           baseColor="#c1a891"
                           className="react-loading-skeleton"
-                          style={!item?.title ? { margin: "1.90625rem 0" } : {}}
+                          style={
+                            !item?.title
+                              ? { margin: "1.90625rem 0", maxHeight }
+                              : { maxHeight }
+                          }
                         />
                       )}
                     </div>

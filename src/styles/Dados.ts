@@ -15,8 +15,10 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  padding: 3.25rem 0 1.4375rem 0;
+  flex: 100%;
+  max-height: 28.5rem;
   align-self: center;
 
   h1,

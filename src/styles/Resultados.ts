@@ -3,22 +3,20 @@ import styled from "styled-components";
 export const Main = styled.main`
   flex: 1;
   width: 100%;
-  padding-bottom: 4rem;
+  /* padding-bottom: 4rem; */
 
   display: flex;
   flex-direction: column;
 `;
 
 export const ContentContainer = styled.div`
+  flex: 1;
   width: 100%;
   max-width: 28.25rem;
-  flex: 1;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding: 1rem 0 3rem 0;
   align-self: center;
 
   h1 {
@@ -26,7 +24,7 @@ export const ContentContainer = styled.div`
     color: ${({ theme }) => theme.primary};
     font-family: "AdihausDINBold", sans-serif;
     font-size: 1.125rem;
-    line-height: 1.875rem;
+    line-height: 1.1875rem;
     letter-spacing: 0.06em;
   }
 
@@ -35,7 +33,12 @@ export const ContentContainer = styled.div`
   }
 
   .loading-txt {
-    margin: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 23.5rem;
 
     span {
       font-size: 1rem;
@@ -49,7 +52,7 @@ export const ContentContainer = styled.div`
   }
 
   button.primary {
-    margin: 1.25rem 0 1.5rem 0;
+    margin: 0 0 1.5rem 0;
   }
 
   h1.mail-call {
@@ -114,7 +117,7 @@ export const ResultsContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
 
-  margin-bottom: 2rem;
+  margin: 0.25rem 0 1.75rem 0;
 
   > div + div {
     margin-left: 1.5rem;
@@ -123,6 +126,7 @@ export const ResultsContainer = styled.div`
   div {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     > h1 {
       font-size: 0.725rem;
@@ -142,9 +146,10 @@ export const ResultsContainer = styled.div`
       justify-content: center;
 
       background: ${({ theme }) => theme.secondary};
-      border-radius: 0.35rem;
-      width: 6.5rem;
-      margin-bottom: 0.755rem;
+      border-radius: 3px;
+      height: 1.5rem;
+      width: 5.1875rem;
+      margin-bottom: 0.5rem;
 
       h1 {
         font-size: 0.75rem;
@@ -160,9 +165,10 @@ export const ResultsContainer = styled.div`
       align-items: center;
       justify-content: center;
 
-      border: 2px solid ${({ theme }) => theme.primary};
-      border-radius: 0.35rem;
-      width: 6.5rem;
+      border: 1px solid ${({ theme }) => theme.primary};
+      border-radius: 3px;
+      height: 1.5rem;
+      width: 5.1875rem;
 
       h1 {
         font-size: 0.825rem;
@@ -174,6 +180,7 @@ export const ResultsContainer = styled.div`
   }
 
   div.tamanhos {
+    margin-top: 0.625rem;
     flex-direction: row;
 
     div {
@@ -181,14 +188,14 @@ export const ResultsContainer = styled.div`
       align-items: center;
       justify-content: center;
 
-      height: 4.5rem;
-      width: 4.5rem;
+      height: 3.25rem;
+      width: 3.25rem;
       border-radius: 50%;
       background-color: ${({ theme }) => theme.secondary};
 
       h1 {
         font-family: "AdihausDINBold", sans-serif;
-        font-size: 1.5725rem;
+        font-size: 1.5rem;
         color: white;
         text-transform: uppercase;
       }

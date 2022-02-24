@@ -146,7 +146,7 @@ export default function Dados(): JSX.Element {
                     {!showImgs && (
                       <Skeleton
                         style={{
-                          height: "2rem",
+                          height: "1.925rem",
                           borderRadius: "3px",
                         }}
                         highlightColor="#dbc7b3"
