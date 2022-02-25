@@ -32,6 +32,7 @@ export default function Medidas(): JSX.Element {
   const [msg, setMsg] = React.useState(null);
   const [emailLoading, setEmailLoading] = React.useState(false);
   const [borderColor, setBorderColor] = React.useState("rgba(71, 58, 53, 0.5)");
+  const [url, setUrl] = React.useState("");
 
   async function handleNewsLetter() {
     if (borderColor !== "green") {
@@ -71,6 +72,27 @@ export default function Medidas(): JSX.Element {
         if (!intensidade || !ano) router.push("/dados");
         if (!seio) router.push("/seios");
         if (!busto || !torax) router.push("/medidas");
+
+        switch (intensidade) {
+          case "ALTO":
+            setUrl(
+              "https://www.adidas.com.br/alto_suporte-tops_esportivos_e_de_suporte-mulher"
+            );
+            break;
+          case "LEVE":
+            setUrl(
+              "https://www.adidas.com.br/baixo_suporte-tops_esportivos_e_de_suporte-mulher"
+            );
+            break;
+          case "MÉDIO":
+            setUrl(
+              "https://www.adidas.com.br/medio_suporte-tops_esportivos_e_de_suporte-mulher"
+            );
+            break;
+          default:
+            router.push("/dados");
+            return;
+        }
 
         const res = await getProducts(
           parseInt(ano, 10),
@@ -198,7 +220,14 @@ export default function Medidas(): JSX.Element {
               )}
             </>
           )}
-          <button type="button" className="primary">
+          <button
+            type="button"
+            className="primary"
+            onClick={() => {
+              if (!url) return;
+              window.open(url);
+            }}
+          >
             SAIBA MAIS
             <img
               src="/static/images/seta-direita-branca.png"
