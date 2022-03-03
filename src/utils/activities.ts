@@ -43,7 +43,7 @@ export const activities = [
   },
   {
     id: 7,
-    name: "GINASTICA",
+    name: "GINÁSTICA",
     src: "07_ginastica.png",
     type: "MÉDIO",
   },
@@ -97,7 +97,7 @@ export const activities = [
   },
   {
     id: 16,
-    name: "INTENSO",
+    name: "CROSSFIT",
     src: "16_intenso.png",
     type: "ALTO",
   },

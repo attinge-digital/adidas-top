@@ -136,7 +136,9 @@ export const ResultsContainer = styled.div`
     > span,
     .react-loading-skeleton {
       width: 100%;
-      margin-top: -1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .impact-container {

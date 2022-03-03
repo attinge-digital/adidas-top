@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 
 import GlobalStyle from "../styles/global";
 import theme from "../styles/theme";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (

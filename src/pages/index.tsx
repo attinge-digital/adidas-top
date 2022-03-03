@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
             className="bottom-left"
           />
         </Section>
-        <Section>
+        <Section style={{ maxHeight: "90%" }}>
           <img
             src="/static/images/intro-top-right.png"
             alt="Mulher usando top vermelho"

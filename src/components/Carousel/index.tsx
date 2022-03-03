@@ -6,7 +6,6 @@ import Skeleton from "react-loading-skeleton";
 import { ProductSlide } from "../ProductSlide";
 
 import { EmblaContainer } from "./styles";
-import "react-loading-skeleton/dist/skeleton.css";
 
 type Product = {
   code: string;

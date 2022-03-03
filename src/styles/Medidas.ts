@@ -21,6 +21,19 @@ export const ContentContainer = styled.div`
   max-height: 28.5rem;
   align-self: center;
 
+  > span,
+  .react-loading-skeleton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+
+    * {
+      width: 90%;
+    }
+  }
+
   h1 {
     text-align: center;
     color: ${({ theme }) => theme.primary};

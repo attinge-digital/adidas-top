@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Main = styled.main`
   flex: 1;
   width: 100%;
-
   max-width: 28.5rem;
   align-self: center;
 

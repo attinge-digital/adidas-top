@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Skeleton from "react-loading-skeleton";
 
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { Carousel } from "../components/Carousel";
 import { RangeInput } from "../components/Range";
 
 import { Main, ContentContainer, MedidasContainer } from "../styles/Medidas";
@@ -18,23 +18,8 @@ export default function Medidas(): JSX.Element {
   const router = useRouter();
   const [busto, setBusto] = React.useState(0);
   const [torax, setTorax] = React.useState(0);
-  const [selectedSlide, setSelectedSlide] = React.useState(0);
+  const [isLoading, setIsLoading] = React.useState(true);
   const [usedStored, setUsedStored] = React.useState(false);
-
-  const slides = [
-    {
-      img: "torax.png",
-      value: "Como medir tórax",
-      title: "POSIÇÃO DA FITA PARA MEDIR O TÓRAX",
-      customStyles: "15rem",
-    },
-    {
-      img: "busto.png",
-      value: "Como medir busto",
-      title: "POSIÇÃO DA FITA PARA MEDIR O BUSTO",
-      customStyles: "15rem",
-    },
-  ];
 
   React.useEffect(() => {
     const seioType = localStorage.getItem("@AdidasTop:seio");
@@ -51,12 +36,25 @@ export default function Medidas(): JSX.Element {
         <Header />
         <ContentContainer>
           <h1>AGORA NOS INFORME SUAS MEDIDAS</h1>
-          <Carousel
-            maxHeight="15rem"
-            slides={slides}
-            selectedSlide={selectedSlide}
-            setSelectedSlide={setSelectedSlide}
+          <img
+            src="/static/images/img-medidas.png"
+            alt="tutorial de medidas"
+            className="img-medidas"
+            style={{ height: isLoading ? 0 : "15rem" }}
+            onLoad={() => setIsLoading(false)}
           />
+          {isLoading && (
+            <Skeleton
+              style={{
+                width: "80%",
+                height: "15rem",
+                borderRadius: "3px",
+              }}
+              highlightColor="#dbc7b3"
+              baseColor="#c1a891"
+              className="react-loading-skeleton"
+            />
+          )}
           <MedidasContainer>
             <div>
               <RangeInput
