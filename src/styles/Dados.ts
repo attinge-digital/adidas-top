@@ -77,11 +77,9 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const IconsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
 
   width: 90%;
   margin-bottom: 1rem;
@@ -93,7 +91,7 @@ export const IconsContainer = styled.div`
     /* justify-content: center; */
     padding: 0 0 0.75rem 0;
 
-    width: 30%;
+    /* width: 30%; */
 
     span,
     .react-loading-skeleton {
@@ -106,6 +104,7 @@ export const IconsContainer = styled.div`
       letter-spacing: 0.06em;
       display: flex;
       color: ${({ theme }) => theme.textSecondary};
+      width: unset;
     }
 
     img {
@@ -113,6 +112,7 @@ export const IconsContainer = styled.div`
       height: 2rem;
       object-fit: contain;
       margin-right: 0.5rem;
+      margin-left: 1.05rem;
     }
   }
 `;

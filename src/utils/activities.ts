@@ -67,7 +67,7 @@ export const activities = [
   },
   {
     id: 11,
-    name: "VOLÊI",
+    name: "VÔLEI",
     src: "11_volei.png",
     type: "MÉDIO",
   },
@@ -79,7 +79,7 @@ export const activities = [
   },
   {
     id: 13,
-    name: "BOXE",
+    name: "LUTA",
     src: "13_boxe.png",
     type: "ALTO",
   },
@@ -97,7 +97,7 @@ export const activities = [
   },
   {
     id: 16,
-    name: "CROSSFIT",
+    name: "TREINO INTENSO",
     src: "16_intenso.png",
     type: "ALTO",
   },

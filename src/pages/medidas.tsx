@@ -27,6 +27,11 @@ export default function Medidas(): JSX.Element {
     if (!seioType) router.push("/seios");
   }, []);
 
+  React.useEffect(() => {
+    localStorage.setItem("@AdidasTop:busto", `${98}`);
+    localStorage.setItem("@AdidasTop:torax", `${75}`);
+  }, []);
+
   return (
     <>
       <Head>
