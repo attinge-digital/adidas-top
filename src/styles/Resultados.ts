@@ -14,6 +14,10 @@ export const ContentContainer = styled.div`
   width: 100%;
   max-width: 28.25rem;
 
+  @media (min-width: 744px) {
+    max-width: 41.4375rem;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +30,11 @@ export const ContentContainer = styled.div`
     font-size: 1.125rem;
     line-height: 1.1875rem;
     letter-spacing: 0.06em;
+
+    @media (min-width: 744px) {
+      line-height: unset;
+      font-size: 1.75rem;
+    }
   }
 
   .title {
@@ -49,6 +58,14 @@ export const ContentContainer = styled.div`
     .typed-cursor {
       display: none;
     }
+
+    @media (min-width: 744px) {
+      span {
+        font-size: 1.75rem;
+      }
+
+      max-height: 47.6425rem;
+    }
   }
 
   button.primary {
@@ -59,10 +76,15 @@ export const ContentContainer = styled.div`
     margin: 0 0 0.5rem 0;
     font-size: 0.825rem;
     font-family: "AdihausDINRegular", sans-serif;
+
+    @media (min-width: 744px) {
+      font-size: 1.5rem;
+      margin: 1rem 0 0.75rem 0;
+    }
   }
 
   div.input-wrapper {
-    margin: 0;
+    margin: 0 0 5rem 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -94,6 +116,14 @@ export const ContentContainer = styled.div`
       &:focus {
         border: 1px solid ${({ theme }) => theme.primary};
       }
+
+      @media (min-width: 744px) {
+        max-width: 23.5rem;
+        width: calc(90% - 5.125rem);
+        height: 3.85rem;
+        font-size: 1.5rem;
+        padding-left: 1.625rem;
+      }
     }
 
     button {
@@ -103,6 +133,11 @@ export const ContentContainer = styled.div`
 
       height: 2rem;
       width: 2.75rem;
+
+      @media (min-width: 744px) {
+        width: 5.125rem;
+        height: 3.85rem;
+      }
 
       img {
         margin: 0;
@@ -206,5 +241,10 @@ export const ResultsContainer = styled.div`
         margin-left: 0.5rem;
       }
     }
+  }
+
+  @media (min-width: 744px) {
+    transform: scale(1.625);
+    margin: -1rem 0 4rem 0;
   }
 `;

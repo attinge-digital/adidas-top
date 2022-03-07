@@ -12,6 +12,10 @@ export const Main = styled.main`
   justify-content: space-between;
 
   padding: 0.75rem;
+
+  @media (min-width: 744px) {
+    max-height: calc(100% - 0.75rem);
+  }
 `;
 
 export const Section = styled.section`
@@ -83,13 +87,12 @@ export const ContentContainer = styled.div`
 
   @media (min-width: 744px) {
     .title {
-      margin-top: 1.5rem;
-      font-size: 2rem;
-      margin-bottom: 1.75rem;
+      font-size: 2.375rem;
+      margin: 0.5rem 0;
     }
 
     .subtitle {
-      font-size: 1.25rem;
+      font-size: 1.75rem;
       margin-bottom: 2.25rem;
     }
   }

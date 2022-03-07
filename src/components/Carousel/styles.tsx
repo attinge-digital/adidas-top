@@ -32,7 +32,7 @@ export const EmblaContainer = styled.div`
       width: 95%;
     }
 
-    span.react-loading-skeleton {
+    span.react-loading-skeleton.seio {
       height: 17.5rem;
 
       @media (min-width: 744px) {

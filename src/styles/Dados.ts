@@ -109,6 +109,7 @@ export const ButtonsContainer = styled.div`
     button {
       height: 4.125rem !important;
       font-size: 1.125rem !important;
+      line-height: unset !important;
       max-width: 11.5rem !important;
 
       & + button {

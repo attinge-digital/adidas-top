@@ -109,7 +109,7 @@ export const Carousel = ({
                         <Skeleton
                           highlightColor="#dbc7b3"
                           baseColor="#c1a891"
-                          className="react-loading-skeleton"
+                          className="react-loading-skeleton seio"
                           style={
                             !item?.title
                               ? { margin: "1.90625rem 0", maxHeight }

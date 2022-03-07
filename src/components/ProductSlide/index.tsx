@@ -58,12 +58,11 @@ export function ProductSlide({
             height: "10.25rem",
             width: "95%",
             margin: "0.875rem auto",
-            maxWidth: "11.875rem",
             borderRadius: "3px",
           }}
           highlightColor="#dbc7b3"
           baseColor="#c1a891"
-          className="react-loading-skeleton"
+          className="react-loading-skeleton product"
         />
       )}
       <h1>{name}</h1>

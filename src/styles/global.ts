@@ -98,6 +98,8 @@ export default createGlobalStyle`
         width: 18.375rem;
 
         font-size: 1.625rem;
+
+        box-shadow: ${({ theme }) => theme.background} 6px 6px 0px -1.75px, ${({ theme }) => theme.primary} 6px 6px;
         
         img {
           max-width: 3.75rem;

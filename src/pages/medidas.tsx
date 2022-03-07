@@ -45,7 +45,7 @@ export default function Medidas(): JSX.Element {
             src="/static/images/img-medidas.png"
             alt="tutorial de medidas"
             className="img-medidas"
-            style={isLoading ? { height: 0 } : {}}
+            style={isLoading ? { height: 0, margin: 0 } : {}}
             onLoad={() => setIsLoading(false)}
           />
           {isLoading && (
