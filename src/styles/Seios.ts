@@ -24,14 +24,15 @@ export const ContentContainer = styled.div`
   h1 {
     color: ${({ theme }) => theme.primary};
     font-family: "AdihausDINBold", sans-serif;
-    font-size: 1.25rem;
+    font-size: 2rem;
     line-height: 100%;
     letter-spacing: 0.06em;
 
-    margin: 0 auto -1.5rem 1rem;
+    margin: 0 auto -0.5rem 1rem;
   }
 
-  button.primary {
-    margin-top: 4.5rem;
+  @media (min-width: 744px) {
+    max-height: 50.9375rem;
+    max-width: 41.4375rem;
   }
 `;

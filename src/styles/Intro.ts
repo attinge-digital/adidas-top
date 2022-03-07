@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
   flex: 1;
   width: 100%;
-  max-width: 28.5rem;
+  max-width: 41.4375rem;
   align-self: center;
 
   display: flex;
@@ -42,6 +42,10 @@ export const Section = styled.section`
     transform: translateY(-0.75rem);
     height: 55%;
   }
+
+  @media (min-width: 744px) {
+    width: calc(50% - 0.525rem);
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -75,5 +79,18 @@ export const ContentContainer = styled.div`
     font-size: 1rem;
     font-family: "AdihausDINRegular", sans-serif;
     margin-bottom: 1rem;
+  }
+
+  @media (min-width: 744px) {
+    .title {
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 2.25rem;
+    }
   }
 `;

@@ -47,16 +47,33 @@ export const ContentContainer = styled.div`
     margin-bottom: 1.125rem;
   }
 
-  .title {
-    margin-bottom: 0.9375rem;
+  img {
+    height: 15rem;
   }
 
-  .subtitle {
-    margin-bottom: 0.625rem;
+  > span,
+  .react-loading-skeleton {
+    height: 15rem;
   }
 
-  button.primary {
-    margin-top: 1.5rem;
+  @media (min-width: 744px) {
+    max-height: 50.9375rem;
+    max-width: 41.4375rem;
+
+    h1 {
+      font-size: 1.625rem;
+    }
+
+    img {
+      height: 21.5rem;
+      margin: 1.5rem 0;
+    }
+
+    > span,
+    .react-loading-skeleton {
+      height: 21.5rem;
+      margin: 1.5rem 0;
+    }
   }
 `;
 
@@ -71,8 +88,16 @@ export const MedidasContainer = styled.div`
 
   margin: 1.125rem 0 1rem 0;
 
+  @media (min-width: 744px) {
+    margin: 1.125rem 0 2.875rem 0;
+  }
+
   > div {
     width: calc(100% - 7rem);
+
+    @media (min-width: 744px) {
+      width: calc(100% - 10.5rem);
+    }
   }
 
   .medidas {
@@ -136,6 +161,10 @@ export const MedidasContainer = styled.div`
       border-left: 2.375rem solid transparent;
       border-right: 2.375rem solid transparent;
       border-top: 0.125rem solid ${({ theme }) => theme.backgroundSecondaryOpc};
+    }
+
+    @media (min-width: 744px) {
+      transform: scale(2);
     }
   }
 `;

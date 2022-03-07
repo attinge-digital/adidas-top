@@ -45,14 +45,13 @@ export default function Medidas(): JSX.Element {
             src="/static/images/img-medidas.png"
             alt="tutorial de medidas"
             className="img-medidas"
-            style={{ height: isLoading ? 0 : "15rem" }}
+            style={isLoading ? { height: 0 } : {}}
             onLoad={() => setIsLoading(false)}
           />
           {isLoading && (
             <Skeleton
               style={{
                 width: "80%",
-                height: "15rem",
                 borderRadius: "3px",
               }}
               highlightColor="#dbc7b3"

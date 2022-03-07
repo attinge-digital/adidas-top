@@ -58,6 +58,7 @@ export function RangeInput({
           <div
             onMouseDown={props.onMouseDown}
             onTouchStart={props.onTouchStart}
+            className="range-container"
             style={{
               ...props.style,
               height: "24px",
@@ -87,6 +88,7 @@ export function RangeInput({
         )}
         renderThumb={({ props }) => (
           <div
+            className="range-circle"
             {...props}
             style={{
               ...props.style,

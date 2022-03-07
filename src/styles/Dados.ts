@@ -60,6 +60,31 @@ export const ContentContainer = styled.div`
   .subtitle {
     margin-bottom: 0.625rem;
   }
+
+  @media (min-width: 744px) {
+    max-height: 50.9375rem;
+    max-width: 41.4375rem;
+
+    h1 {
+      font-size: 1.5rem;
+      line-height: 1.625rem;
+    }
+
+    h2 {
+      font-size: 1.125rem;
+      line-height: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      line-height: 1.125rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .title {
+      margin-bottom: 1.8125rem;
+    }
+  }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -73,6 +98,23 @@ export const ButtonsContainer = styled.div`
 
   * {
     width: 32%;
+  }
+
+  @media (min-width: 744px) {
+    width: 100%;
+    justify-content: center;
+
+    margin: 1.375rem 0 3.25rem 0;
+
+    button {
+      height: 4.125rem !important;
+      font-size: 1.125rem !important;
+      max-width: 11.5rem !important;
+
+      & + button {
+        margin-left: 0.75rem;
+      }
+    }
   }
 `;
 
@@ -113,6 +155,24 @@ export const IconsContainer = styled.div`
       object-fit: contain;
       margin-right: 0.5rem;
       margin-left: 1.05rem;
+    }
+
+    @media (min-width: 744px) {
+      h1 {
+        font-size: 1.125rem;
+      }
+
+      span,
+      .react-loading-skeleton {
+        height: 3.75rem !important;
+      }
+
+      img {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin-right: 1rem;
+        margin-left: 2.05rem;
+      }
     }
   }
 `;

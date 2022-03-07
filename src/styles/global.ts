@@ -73,6 +73,11 @@ export default createGlobalStyle`
       padding: 0;
       background-color: transparent;
       margin: 0.75rem 0;
+
+      @media (min-width: 744px) {
+        margin: 2.5rem 0;
+        font-size: 1.5rem;
+      }
     }
 
     &.primary {
@@ -87,6 +92,17 @@ export default createGlobalStyle`
 
       background: ${({ theme }) => theme.primary};
       box-shadow: ${({ theme }) => theme.background} 4px 4px 0px -1.75px, ${({ theme }) => theme.primary} 4px 4px;
+
+      @media (min-width: 744px) {
+        height: 6rem;
+        width: 18.375rem;
+
+        font-size: 1.625rem;
+        
+        img {
+          max-width: 3.75rem;
+        }
+      }
     }
     
     &.secondary {

@@ -4,17 +4,16 @@ export const EmblaContainer = styled.div`
   width: 100%;
   max-height: 20rem;
 
+  @media (min-width: 744px) {
+    max-height: 36.25rem;
+  }
+
   padding: 0 1rem;
 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  .seta-loading-skeleton {
-    width: 2rem;
-    height: 1rem;
-  }
 
   .embla {
     width: 90%;
@@ -35,6 +34,11 @@ export const EmblaContainer = styled.div`
 
     span.react-loading-skeleton {
       height: 17.5rem;
+
+      @media (min-width: 744px) {
+        height: 27.5rem !important;
+        max-height: 27.5rem !important;
+      }
     }
 
     img {
@@ -53,6 +57,25 @@ export const EmblaContainer = styled.div`
       opacity: 0.5;
       margin-top: 1rem;
     }
+
+    @media (min-width: 744px) {
+      height: 36.25rem;
+      max-height: 36.25rem;
+
+      img {
+        max-height: 27.5rem;
+      }
+    }
+  }
+
+  .seta-loading-skeleton {
+    width: 2rem;
+    height: 1rem;
+
+    @media (min-width: 744px) {
+      min-width: 3rem !important;
+      height: 1.375rem;
+    }
   }
 
   button {
@@ -66,6 +89,10 @@ export const EmblaContainer = styled.div`
       width: 2.5rem;
       object-fit: contain;
       margin: 0;
+
+      @media (min-width: 744px) {
+        min-width: 3rem;
+      }
     }
   }
 `;

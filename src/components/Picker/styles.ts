@@ -36,4 +36,32 @@ export const Container = styled.div`
       top: 0.65rem;
     }
   }
+
+  @media (min-width: 744px) {
+    margin-top: 0.75rem;
+    margin-bottom: 3.875rem;
+    max-width: 17.5rem;
+
+    * {
+      font-size: 1.875rem;
+      letter-spacing: 24%;
+    }
+
+    .rmc-picker {
+      height: 5.375rem;
+
+      .rmc-picker-mask {
+        background-size: 100% 30% !important;
+      }
+
+      .rmc-picker-item {
+        /* height: 1.575rem;
+      line-height: 1.575rem; */
+      }
+
+      .rmc-picker-content {
+        top: 1.3rem;
+      }
+    }
+  }
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 30.5rem;
+  max-width: 43.9375rem;
   padding: 0.9375rem 1.25rem;
 
   display: flex;
@@ -15,6 +15,14 @@ export const Container = styled.div`
   img {
     width: 1.875rem;
     object-fit: center;
+  }
+
+  @media (min-width: 744px) {
+    padding: 2.25rem 1.25rem;
+
+    img {
+      width: 4.125rem;
+    }
   }
 `;
 
@@ -37,5 +45,13 @@ export const TextContainer = styled.div`
 
   h2 {
     font-family: "AdihausDINRegular", sans-serif;
+  }
+
+  @media (min-width: 744px) {
+    h1,
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.375rem;
+    }
   }
 `;

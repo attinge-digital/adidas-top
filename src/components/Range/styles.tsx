@@ -35,4 +35,23 @@ export const Container = styled.div`
   *:focus-visible {
     outline: none !important;
   }
+
+  @media (min-width: 744px) {
+    .range-container {
+      height: 3rem !important;
+
+      .range-circle {
+        height: 1.5rem !important;
+        width: 1.5rem !important;
+      }
+    }
+
+    h1 {
+      font-size: 1.5rem !important;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+  }
 `;
