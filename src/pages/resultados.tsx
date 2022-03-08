@@ -258,9 +258,9 @@ export default function Medidas(): JSX.Element {
           ) : (
             <h1 style={{ marginTop: "0.5rem" }}>{msg}</h1>
           )}
-          {/* <button type="button" className="back" onClick={() => router.back()}>
+          <button type="button" className="back" onClick={() => router.back()}>
             VOLTAR
-          </button> */}
+          </button>
         </ContentContainer>
       </Main>
     </>

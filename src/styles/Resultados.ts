@@ -84,7 +84,6 @@ export const ContentContainer = styled.div`
   }
 
   div.input-wrapper {
-    margin: 0 0 5rem 0;
     width: 100%;
     display: flex;
     flex-direction: row;

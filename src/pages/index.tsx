@@ -12,12 +12,26 @@ import { ContentContainer, Main, Section } from "../styles/Intro";
 export default function Home(): JSX.Element {
   const router = useRouter();
 
+  const [innerHeight, setInnerHeight] = React.useState<number | string>(
+    "100vh"
+  );
+
+  React.useEffect(() => {
+    if (window) {
+      setInnerHeight(window?.innerHeight);
+    }
+  }, []);
+
   return (
     <>
       <Head>
         <title>Intro | Adidas</title>
       </Head>
-      <Main>
+      <Main
+        style={{
+          maxHeight: `calc(${innerHeight}px - 0.75rem)`,
+        }}
+      >
         <Section>
           <img
             src="/static/images/intro-top-left.png"
