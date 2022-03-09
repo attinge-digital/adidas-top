@@ -201,9 +201,28 @@ export default function Medidas(): JSX.Element {
             type="button"
             className="primary"
             onClick={() => {
-              window.open(
-                "https://www.adidas.com.br/blog/450487-como-acertar-no-top"
+              const intensidade = localStorage.getItem(
+                "@AdidasTop:impactLevel"
               );
+
+              switch (intensidade) {
+                case "ALTO":
+                  window.open(
+                    "https://www.adidas.com.br/alto_suporte-tops_esportivos_e_de_suporte-mulher"
+                  );
+                  break;
+                case "LEVE":
+                  window.open(
+                    "https://www.adidas.com.br/baixo_suporte-tops_esportivos_e_de_suporte-mulher"
+                  );
+                  break;
+                case "MÉDIO":
+                default:
+                  window.open(
+                    "https://www.adidas.com.br/medio_suporte-tops_esportivos_e_de_suporte-mulher"
+                  );
+                  break;
+              }
             }}
           >
             SAIBA MAIS
