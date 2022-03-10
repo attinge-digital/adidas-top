@@ -124,8 +124,7 @@ export const Carousel = ({
             ) : (
               <>
                 {slides.map((item, index) => {
-                  const inView = emblaApi?.slidesInView() || [];
-                  const isOnFocus = inView?.some((i) => i === index);
+                  const isOnFocus = selectedSlide === index;
 
                   return (
                     <ProductSlide

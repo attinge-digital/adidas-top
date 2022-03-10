@@ -28,7 +28,8 @@ export const Slide = styled.div`
     max-width: 11.875rem;
 
     @media (min-width: 744px) {
-      max-width: 22.5rem;
+      max-width: 22.5rem !important;
+      max-height: 22.5rem !important;
     }
   }
 
@@ -44,6 +45,7 @@ export const Slide = styled.div`
       max-width: 22.5rem;
       height: 22.5rem !important;
       max-height: 22.5rem !important;
+      margin: 0 auto !important;
     }
   }
 `;
