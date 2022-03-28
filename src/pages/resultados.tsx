@@ -11,6 +11,7 @@ import { Carousel } from "../components/Carousel";
 import { getProducts, newsLetter } from "../api/endpoints";
 
 import { Main, ContentContainer, ResultsContainer } from "../styles/Resultados";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import loadingJson from "../assets/loading.json";
 
@@ -79,10 +80,6 @@ export default function Medidas(): JSX.Element {
           torax
         );
 
-        if (!res.products?.length) {
-          setError("Não encontramos peças ideias para você :(");
-        }
-
         setResults(res);
         setTimeout(() => setIsLoading(false), 1000);
       } catch (err) {
@@ -123,11 +120,11 @@ export default function Medidas(): JSX.Element {
       <Main>
         <Header />
         <ContentContainer>
-          <h1>RECOMENDADOS ESSES TOPS</h1>
           {!isLoading && !error ? (
             <>
-              {results && (
+              {results?.products?.length ? (
                 <>
+                  <h1>RECOMENDADOS ESSES TOPS</h1>
                   <Carousel
                     isProductSlide
                     slides={results?.products}
@@ -137,7 +134,7 @@ export default function Medidas(): JSX.Element {
                   />
                   <ResultsContainer>
                     <div>
-                      <h1>TAMANHOS</h1>
+                      <h1>TAMANHO</h1>
                       <div className="tamanhos">
                         <div>
                           <h1>{results.tamanhoA}</h1>
@@ -147,7 +144,7 @@ export default function Medidas(): JSX.Element {
                         </div>
                       </div>
                     </div>
-                    <div style={{ alignItems: "center" }}>
+                    <div>
                       <h1>IMPACTO</h1>
                       <div className="impact-container">
                         <h1>{results.intensidade}</h1>
@@ -164,9 +161,8 @@ export default function Medidas(): JSX.Element {
                           ) : (
                             <Skeleton
                               style={{
-                                height: "1.5rem",
+                                height: "calc(1.5rem)",
                                 borderRadius: "3px",
-                                maxWidth: "5.1875rem",
                               }}
                               highlightColor="#dbc7b3"
                               baseColor="#c1a891"
@@ -175,6 +171,32 @@ export default function Medidas(): JSX.Element {
                           )}
                         </>
                       )}
+                    </div>
+                  </ResultsContainer>
+                </>
+              ) : (
+                <>
+                  <h1 className="empty-results">
+                    FALE COM NOSSO TIME DE LOJA OU ACESSE O SITE PARA ENCONTRAR
+                    A MELHOR OPÇÃO PARA VOCÊ!
+                  </h1>
+                  <ResultsContainer className="empty-results">
+                    <div>
+                      <h1>TAMANHO</h1>
+                      <div className="tamanhos">
+                        <div>
+                          <h1>{results.tamanhoA}</h1>
+                        </div>
+                        <div>
+                          <h1>{results.tamanhoB}</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h1>IMPACTO</h1>
+                      <div className="impact-container">
+                        <h1>{results.intensidade}</h1>
+                      </div>
                     </div>
                   </ResultsContainer>
                 </>

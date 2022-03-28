@@ -143,6 +143,15 @@ export const ContentContainer = styled.div`
       }
     }
   }
+
+  h1.empty-results {
+    width: 70%;
+    margin-bottom: 2rem;
+
+    @media (min-width: 744px) {
+      margin-bottom: 6rem;
+    }
+  }
 `;
 
 export const ResultsContainer = styled.div`
@@ -232,6 +241,7 @@ export const ResultsContainer = styled.div`
       h1 {
         font-family: "AdihausDINBold", sans-serif;
         font-size: 1.5rem;
+        line-height: 1.35rem;
         color: white;
         text-transform: uppercase;
       }
@@ -245,5 +255,13 @@ export const ResultsContainer = styled.div`
   @media (min-width: 744px) {
     transform: scale(1.625);
     margin: -1rem 0 4rem 0;
+  }
+
+  &.empty-results {
+    margin-bottom: 3rem;
+
+    @media (min-width: 744px) {
+      margin-bottom: 6.25rem;
+    }
   }
 `;
