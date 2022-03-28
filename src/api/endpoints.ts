@@ -43,7 +43,7 @@ export async function getProducts(
           return [
             ...acc,
             {
-              name: curr,
+              name: data?.products[curr][0]?.name || curr,
               colors,
               variants,
             },
