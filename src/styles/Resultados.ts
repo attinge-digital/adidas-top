@@ -144,6 +144,11 @@ export const ContentContainer = styled.div`
     }
   }
 
+  .empty-banner {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
   h1.empty-results {
     width: 70%;
     margin-bottom: 2rem;

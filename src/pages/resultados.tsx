@@ -176,6 +176,11 @@ export default function Medidas(): JSX.Element {
                 </>
               ) : (
                 <>
+                  <img
+                    src="/static/images/not_found.png"
+                    alt="Tres modelos de top"
+                    className="empty-banner"
+                  />
                   <h1 className="empty-results">
                     FALE COM NOSSO TIME DE LOJA OU ACESSE O SITE PARA ENCONTRAR
                     A MELHOR OPÇÃO PARA VOCÊ!
