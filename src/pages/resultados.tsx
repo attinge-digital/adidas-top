@@ -41,7 +41,12 @@ export default function Medidas(): JSX.Element {
 
     try {
       setEmailLoading(true);
-      await newsLetter(email)
+      await newsLetter(
+        email,
+        results.products,
+        results.tamanhoA,
+        results.tamanhoB
+      )
         .then(() => {
           setEmailLoading(false);
           setMsg("E-MAIL ENVIADO COM SUCESSO");

@@ -65,12 +65,33 @@ export async function getProducts(
   }
 }
 
-export async function newsLetter(email) {
+type Variant = {
+  code: string;
+  cor: string;
+  img: string;
+  name: string;
+};
+
+type Produto = {
+  colors: string[];
+  name: string;
+  variants: Variant[];
+};
+
+export async function newsLetter(
+  email: string,
+  produtos: Produto[],
+  tamanhoA,
+  tamanhoB
+) {
   try {
     await api.post(
       "/newsletter",
       {
         email,
+        produtos,
+        tamanhoA,
+        tamanhoB,
       },
       {
         headers: {
