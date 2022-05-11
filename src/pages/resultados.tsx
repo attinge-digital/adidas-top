@@ -55,7 +55,7 @@ export default function Medidas(): JSX.Element {
       setTimeout(() => {
         setMsg("");
         setBorderColor("rgba(71, 58, 53, 0.5)");
-      }, 3000);
+      }, 7500);
     }
   }
 
@@ -224,40 +224,42 @@ export default function Medidas(): JSX.Element {
               )}
             </>
           )}
-          <button
-            type="button"
-            className="primary"
-            onClick={() => {
-              const intensidade = localStorage.getItem(
-                "@AdidasTop:impactLevel"
-              );
+          {msg !== "E-MAIL ENVIADO COM SUCESSO" && (
+            <button
+              type="button"
+              className="primary"
+              onClick={() => {
+                const intensidade = localStorage.getItem(
+                  "@AdidasTop:impactLevel"
+                );
 
-              switch (intensidade) {
-                case "ALTO":
-                  window.open(
-                    "https://www.adidas.com.br/alto_suporte-tops_esportivos_e_de_suporte-mulher"
-                  );
-                  break;
-                case "LEVE":
-                  window.open(
-                    "https://www.adidas.com.br/baixo_suporte-tops_esportivos_e_de_suporte-mulher"
-                  );
-                  break;
-                case "MÉDIO":
-                default:
-                  window.open(
-                    "https://www.adidas.com.br/medio_suporte-tops_esportivos_e_de_suporte-mulher"
-                  );
-                  break;
-              }
-            }}
-          >
-            SAIBA MAIS
-            <img
-              src="/static/images/seta-direita-branca.png"
-              alt="seta branca apontando para a direita"
-            />
-          </button>
+                switch (intensidade) {
+                  case "ALTO":
+                    window.open(
+                      "https://www.adidas.com.br/alto_suporte-tops_esportivos_e_de_suporte-mulher"
+                    );
+                    break;
+                  case "LEVE":
+                    window.open(
+                      "https://www.adidas.com.br/baixo_suporte-tops_esportivos_e_de_suporte-mulher"
+                    );
+                    break;
+                  case "MÉDIO":
+                  default:
+                    window.open(
+                      "https://www.adidas.com.br/medio_suporte-tops_esportivos_e_de_suporte-mulher"
+                    );
+                    break;
+                }
+              }}
+            >
+              SAIBA MAIS
+              <img
+                src="/static/images/seta-direita-branca.png"
+                alt="seta branca apontando para a direita"
+              />
+            </button>
+          )}
           {!msg ? (
             <>
               <h1 className="mail-call">
@@ -302,7 +304,22 @@ export default function Medidas(): JSX.Element {
               </div>
             </>
           ) : (
-            <h1 style={{ marginTop: "0.5rem" }}>{msg}</h1>
+            <>
+              <h1 style={{ marginTop: "0.5rem" }}>{msg}</h1>
+              {msg === "E-MAIL ENVIADO COM SUCESSO" && (
+                <button
+                  type="button"
+                  className="primary pesquisa"
+                  onClick={() => router.push("pesquisa")}
+                >
+                  RESPONDER PESQUISA
+                  <img
+                    src="/static/images/seta-direita-branca.png"
+                    alt="seta branca apontando para a direita"
+                  />
+                </button>
+              )}
+            </>
           )}
           <button type="button" className="back" onClick={() => router.back()}>
             VOLTAR

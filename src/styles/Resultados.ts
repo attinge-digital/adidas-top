@@ -72,6 +72,12 @@ export const ContentContainer = styled.div`
     margin: 0 0 1.5rem 0;
   }
 
+  button.pesquisa {
+    width: 63.33%;
+    max-width: 28rem;
+    margin: 0.75rem 0;
+  }
+
   h1.mail-call {
     margin: 0 0 0.5rem 0;
     font-size: 0.825rem;

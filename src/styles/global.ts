@@ -93,6 +93,10 @@ export default createGlobalStyle`
       background: ${({ theme }) => theme.primary};
       box-shadow: ${({ theme }) => theme.background} 4px 4px 0px -1.75px, ${({ theme }) => theme.primary} 4px 4px;
 
+      div {
+        pointer-events: none;
+      }
+
       @media (min-width: 744px) {
         height: 6rem;
         width: 18.375rem;
