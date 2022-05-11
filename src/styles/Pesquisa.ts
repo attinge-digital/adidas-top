@@ -40,7 +40,7 @@ export const ContentContainer = styled.div`
 
   h2 {
     color: ${({ theme }) => theme.primary};
-    font-family: "AdihausDINBold", sans-serif;
+    font-family: "AdihausDINRegular", sans-serif;
     font-size: 1.125rem;
     line-height: 1.25rem;
     letter-spacing: 0.06em;
@@ -57,7 +57,7 @@ export const ContentContainer = styled.div`
 
   h3 {
     color: ${({ theme }) => theme.primary};
-    font-family: "AdihausDINBold", sans-serif;
+    font-family: "AdihausDINRegular", sans-serif;
     font-size: 0.6875rem;
     line-height: 0.8125rem;
     letter-spacing: 0.24em;

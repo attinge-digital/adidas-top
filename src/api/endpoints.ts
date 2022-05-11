@@ -83,3 +83,28 @@ export async function newsLetter(email) {
     throw new Error(err.message);
   }
 }
+
+export async function pesquisa(
+  rate: number,
+  email: string,
+  comentario: string
+) {
+  try {
+    await api.post(
+      "/pesquisas",
+      {
+        rate,
+        email,
+        comentario,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    );
+  } catch (err) {
+    throw new Error(err.message);
+  }
+}

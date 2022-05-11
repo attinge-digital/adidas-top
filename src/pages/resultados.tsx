@@ -310,7 +310,9 @@ export default function Medidas(): JSX.Element {
                 <button
                   type="button"
                   className="primary pesquisa"
-                  onClick={() => router.push("pesquisa")}
+                  onClick={() =>
+                    router.push({ pathname: "pesquisa", query: { email } })
+                  }
                 >
                   RESPONDER PESQUISA
                   <img
