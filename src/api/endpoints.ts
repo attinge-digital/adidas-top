@@ -81,17 +81,21 @@ type Produto = {
 export async function newsLetter(
   email: string,
   produtos: Produto[],
-  tamanhoA,
-  tamanhoB
+  intensidade: string,
+  tamanhoA: string,
+  tamanhoB: string,
+  link: string
 ) {
   try {
     await api.post(
-      "/newsletter",
+      "/sendmail",
       {
         email,
         produtos,
+        intensidade,
         tamanhoA,
         tamanhoB,
+        link,
       },
       {
         headers: {

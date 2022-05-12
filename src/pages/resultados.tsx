@@ -32,6 +32,17 @@ export default function Medidas(): JSX.Element {
   const [msg, setMsg] = React.useState(null);
   const [emailLoading, setEmailLoading] = React.useState(false);
   const [borderColor, setBorderColor] = React.useState("rgba(71, 58, 53, 0.5)");
+  const saibaMais = React.useMemo(() => {
+    switch (results?.intensidade) {
+      case "ALTO":
+        return "https://www.adidas.com.br/alto_suporte-tops_esportivos_e_de_suporte-mulher";
+      case "LEVE":
+        return "https://www.adidas.com.br/baixo_suporte-tops_esportivos_e_de_suporte-mulher";
+      case "MÉDIO":
+      default:
+        return "https://www.adidas.com.br/medio_suporte-tops_esportivos_e_de_suporte-mulher";
+    }
+  }, [results?.intensidade]);
 
   async function handleNewsLetter() {
     if (borderColor !== "green") {
@@ -44,8 +55,10 @@ export default function Medidas(): JSX.Element {
       await newsLetter(
         email,
         results.products,
+        results.intensidade,
         results.tamanhoA,
-        results.tamanhoB
+        results.tamanhoB,
+        saibaMais
       )
         .then(() => {
           setEmailLoading(false);
@@ -233,30 +246,7 @@ export default function Medidas(): JSX.Element {
             <button
               type="button"
               className="primary"
-              onClick={() => {
-                const intensidade = localStorage.getItem(
-                  "@AdidasTop:impactLevel"
-                );
-
-                switch (intensidade) {
-                  case "ALTO":
-                    window.open(
-                      "https://www.adidas.com.br/alto_suporte-tops_esportivos_e_de_suporte-mulher"
-                    );
-                    break;
-                  case "LEVE":
-                    window.open(
-                      "https://www.adidas.com.br/baixo_suporte-tops_esportivos_e_de_suporte-mulher"
-                    );
-                    break;
-                  case "MÉDIO":
-                  default:
-                    window.open(
-                      "https://www.adidas.com.br/medio_suporte-tops_esportivos_e_de_suporte-mulher"
-                    );
-                    break;
-                }
-              }}
+              onClick={() => window.open(saibaMais)}
             >
               SAIBA MAIS
               <img
